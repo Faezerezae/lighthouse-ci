@@ -1,0 +1,5 @@
+git init
+npm init -y
+node index.js
+npx eslint --init
+npm run lint
