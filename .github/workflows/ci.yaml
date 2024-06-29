@@ -1,15 +1,21 @@
 name: CI
-on: [push]
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
 jobs:
   eslint:
     name: Lint code base
     runs-on: ubuntu-latest
     steps:
-     - name: Checkout code
-       uses: actions/checkout@v2
-     
-      - name: Npm install, build
-        run:  npm i
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Npm install and build
+        run: npm install
+
       - name: Run ESlint
-        run:  npm run lint
-    
+        run: npm run lint
