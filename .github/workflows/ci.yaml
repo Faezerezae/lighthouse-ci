@@ -8,8 +8,8 @@ jobs:
      - name: Checkout code
       - uses: actions/checkout@v2
      
-      - name: npm install, build
+      - name: Npm install, build
         run:  npm i
-      - name: run ESlint
+      - name: Run ESlint
         run:  npm run lint
     
