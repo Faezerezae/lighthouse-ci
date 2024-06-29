@@ -1,11 +1,5 @@
 name: CI
-
-on:
-  push:
-    branches:
-      - main
-      - master
-
+on: [push]
 jobs:
   eslint:
     name: Lint code base
@@ -14,8 +8,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Npm install and build
-        run: npm install
-
+      - name: Npm install, build
+        run: npm i
+        
       - name: Run ESlint
         run: npm run lint
